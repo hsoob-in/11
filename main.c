@@ -1,23 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(void)
+void main(void)
 {
-  int i = 10;
-  char c = 'a';
-  int *iptr;
-  char *cptr;
-  int *iptr2;
+  int i = 300; //300으로 변경해서도 해보기 
   
-  iptr = &i;
-  cptr = &c;
-  iptr2 = iptr;
+  int *pi=&i;
+  char *pc=&i;
   
   
-  printf("i: %p\n%p(sinz:%i)\n", iptr, &i, sizeof(iptr));
-  printf("c: %p\n%p(sinz:%i)\n", cptr, &c, sizeof(cptr));
-  printf("iptr2: %p, %i\n", iptr2, *iptr2);
-  
+  printf("%i, %i, %i\n", i, *pi, *pc);
+  // 마지막이 44로 나오는 이유: byte 1개로 나타낼 수 없어서 byte를 2개 씀 
+
   system("PAUSE");	
   return 0;
 }
