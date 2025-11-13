@@ -1,16 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void swap(int *x, int *y)
+{
+     int temp;
+     temp = *x;
+     *x=*y;
+     *y=temp;
+}
+      
+
 void main(void)
 {
-  int i = 300; //300으로 변경해서도 해보기 
+  int a = 3;
+  int b = 5;
   
-  int *pi=&i;
-  char *pc=&i;
-  
-  
-  printf("%i, %i, %i\n", i, *pi, *pc);
-  // 마지막이 44로 나오는 이유: byte 1개로 나타낼 수 없어서 byte를 2개 씀 
+  int *x, *y;
+
+  swap(&a, &b);
+  printf("a: %i, b: %i\n", a, b);
 
   system("PAUSE");	
   return 0;
